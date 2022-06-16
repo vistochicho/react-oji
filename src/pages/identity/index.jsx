@@ -47,6 +47,7 @@ function IndexIdentity() {
                                         <th>GAMBAR</th>
                                         <th>NAMA</th>
                                         <th>HOBBY</th>
+                                        <th>AKSI</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -56,7 +57,8 @@ function IndexIdentity() {
                                             <td><img src={"https://6fd9-116-206-12-50.ngrok.io/img/" + post.photo } alt="Girl in a jacket" width="200" height="200"/></td>
                                             <td>{ post.name }</td>
                                             <td>{ post.hobby }</td>
-                                            <td className="text-center"></td>
+                                            <td className="text-center">
+                                            </td>
                                         </tr>
                                     )) }
                                 </tbody>
