@@ -25,7 +25,7 @@ function IndexIdentity() {
     //function "fetchData"
     const fectData = async () => {
         //fetching
-        const response = await axios.get('https://6a06-116-206-28-17.ngrok.io/api/identity');
+        const response = await axios.get('https://6fd9-116-206-12-50.ngrok.io/api/identity');
         //get response data
         const data = await response.data.data;
 
@@ -44,27 +44,18 @@ function IndexIdentity() {
                                 <thead>
                                     <tr>
                                         <th>NO.</th>
-                                        <th>TITLE</th>
-                                        <th>CONTENT</th>
-                                        <th>AKSI</th>
+                                        <th>GAMBAR</th>
+                                        <th>NAMA</th>
+                                        <th>HOBBY</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     { posts.map((post, index) => (
                                         <tr key={ post.id }>
                                             <td>{ index + 1 }</td>
+                                            <td><img src={"https://6fd9-116-206-12-50.ngrok.io/img/" + post.photo } alt="Girl in a jacket" width="200" height="200"/></td>
                                             <td>{ post.name }</td>
                                             <td>{ post.hobby }</td>
-                                            <td>{ post.about }</td>
-                                            <td>{ post.commpany }</td>
-                                            <td>{ post.job }</td>
-                                            <td>{ post.country }</td>
-                                            <td>{ post.address }</td>
-                                            <td>{ post.phone }</td>
-                                            <td>{ post.email }</td>
-                                            <td>{ post.instagram }</td>
-                                            <td>{ post.linkedin }</td>
-                                            <td>{ post.github }</td>
                                             <td className="text-center"></td>
                                         </tr>
                                     )) }

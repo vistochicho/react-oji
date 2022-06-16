@@ -14,16 +14,6 @@ function CreateIdentity() {
     //state
     const [name, setName] = useState('');
     const [hobby, setHobby] = useState('');
-    const [about, setAbout] = useState('');
-    const [company, setCompany] = useState('');
-    const [job, setJob] = useState('');
-    const [country, setCountry] = useState('');
-    const [address, setAddress] = useState('');
-    const [phone, setPhone] = useState('');
-    const [email, setEmail] = useState('');
-    const [instagram, setInstagram] = useState('');
-    const [linkedin, setLinkedIn] = useState('');
-    const [github, setGithub] = useState('');
 
     //state validation
     const [validation, setValidation] = useState({});
@@ -36,19 +26,9 @@ function CreateIdentity() {
         e.preventDefault();
         
         //send data to server
-        await axios.post('https://6a06-116-206-28-17.ngrok.io/api/identity', {
+        await axios.post('https://6fd9-116-206-12-50.ngrok.io/api/identity', {
             name: name,
-            hobby: hobby,
-            about: about,
-            company: company,
-            job: job,
-            country: country,
-            address: address,
-            phone: phone,
-            email: email,
-            instagram: instagram,
-            linkedin: linkedin,
-            github: github
+            hobby: hobby
         })
         .then(() => {
 
@@ -89,60 +69,9 @@ function CreateIdentity() {
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>CONTENT</Form.Label>
+                                    <Form.Label>Hobby</Form.Label>
                                     <Form.Control as="textarea" rows={3} value={hobby} onChange={(e) => setHobby(e.target.value)} placeholder="Masukkan Content" />
                                 </Form.Group>
-
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>CONTENT</Form.Label>
-                                    <Form.Control as="textarea" rows={3} value={about} onChange={(e) => setAbout(e.target.value)} placeholder="Masukkan Content" />
-                                </Form.Group>
-
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>CONTENT</Form.Label>
-                                    <Form.Control as="textarea" rows={3} value={company} onChange={(e) => setCompany(e.target.value)} placeholder="Masukkan Content" />
-                                </Form.Group>
-
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>CONTENT</Form.Label>
-                                    <Form.Control as="textarea" rows={3} value={job} onChange={(e) => setJob(e.target.value)} placeholder="Masukkan Content" />
-                                </Form.Group>
-
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>CONTENT</Form.Label>
-                                    <Form.Control as="textarea" rows={3} value={country} onChange={(e) => setCountry(e.target.value)} placeholder="Masukkan Content" />
-                                </Form.Group>
-
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>CONTENT</Form.Label>
-                                    <Form.Control as="textarea" rows={3} value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Masukkan Content" />
-                                </Form.Group>
-
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>CONTENT</Form.Label>
-                                    <Form.Control as="textarea" rows={3} value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Masukkan Content" />
-                                </Form.Group>
-
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>CONTENT</Form.Label>
-                                    <Form.Control as="textarea" rows={3} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Masukkan Content" />
-                                </Form.Group>
-
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>CONTENT</Form.Label>
-                                    <Form.Control as="textarea" rows={3} value={instagram} onChange={(e) => setInstagram(e.target.value)} placeholder="Masukkan Content" />
-                                </Form.Group>
-
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>CONTENT</Form.Label>
-                                    <Form.Control as="textarea" rows={3} value={linkedin} onChange={(e) => setLinkedIn(e.target.value)} placeholder="Masukkan Content" />
-                                </Form.Group>
-
-                                <Form.Group className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>CONTENT</Form.Label>
-                                    <Form.Control as="textarea" rows={3} value={github} onChange={(e) => setGithub(e.target.value)} placeholder="Masukkan Content" />
-                                </Form.Group>
-
                                 <Button variant="primary" type="submit">
                                     SIMPAN
                                 </Button>
