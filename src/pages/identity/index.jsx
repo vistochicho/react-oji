@@ -58,6 +58,8 @@ function IndexIdentity() {
                                             <td>{ post.name }</td>
                                             <td>{ post.hobby }</td>
                                             <td className="text-center">
+
+                                                <Button as={Link} to={`/identity/edit/${post.id}`} variant="primary" size="lg" className="me-2">EDIT</Button>
                                             </td>
                                         </tr>
                                     )) }
