@@ -55,6 +55,16 @@ function IndexIdentity() {
                                             <td>{ index + 1 }</td>
                                             <td>{ post.name }</td>
                                             <td>{ post.hobby }</td>
+                                            <td>{ post.about }</td>
+                                            <td>{ post.commpany }</td>
+                                            <td>{ post.job }</td>
+                                            <td>{ post.country }</td>
+                                            <td>{ post.address }</td>
+                                            <td>{ post.phone }</td>
+                                            <td>{ post.email }</td>
+                                            <td>{ post.instagram }</td>
+                                            <td>{ post.linkedin }</td>
+                                            <td>{ post.github }</td>
                                             <td className="text-center"></td>
                                         </tr>
                                     )) }
